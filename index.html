@@ -1,33 +1,200 @@
-<!-- TODO 1: Create the HTML Boilerplate -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anya's Portfolio</title>
+    <title>Anya Pasko - Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Garamond', serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .top-section {
+            background-color: #f4f4f4;
+            padding: 40px 20px 20px;
+            text-align: center;
+            font-size: 40px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-bottom: 2px solid #ddd;
+            height: 100px;
+        }
+        .top-section h1 {
+            font-family: 'Raleway', sans-serif;
+        }
+        .main-container {
+            display: flex;
+            flex: 1;
+        }
+        .sidebar {
+            flex: 1;
+            background-color: #EBF8FB; 
+            color: #2c3e50;
+            margin-right: 20px;
+            padding: 20px;
+            max-width: 400px;
+            border-radius: 8px; 
+        }
+        .main-content {
+            flex: 2;
+        }
+        .sidebar h1 {
+            color: #2c3e50;
+        }
+        .sidebar a {
+            color: #2980b9;
+        }
+        .sidebar p, .sidebar li {
+            color: #34495e;
+        }
+        .profile-photo {
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        .date {
+            float: right;
+            font-style: italic;
+            color: #777;
+        }
+    </style>
 </head>
 <body>
-    <h1>Anya Pasko's Portfolio</h1>
-    <h2>I'm a Web Developer</h2>
-    <hr />
-    <h3><a href="2.4 Movie Ranking Project/solution.html">Movie Ranking Project</a></h3>
-    <img src="./assets/images/movie-ranking.png" height="200" alt="Movie Ranking Project Image"/>
-    <h3><a href="3.4 Birthday Invite Project/index.html">Birthday Invite Project</a></h3>
-    <img src="./assets/images/birthday-invite.png" height='200' alt="Birthday Invite Project Image"/>
-<hr />
-<a href="./public/contact.html">Contact Me</a>
-<a href="./public/about.html">About Me</a>
+
+    <!-- Top Section -->
+    <div class="top-section">
+        Anya Pasko
+    </div>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <img src="./assets/images/my_photo.png" alt="Anya Pasko" class="profile-photo">
+            <p>Email: annapasko9889@gmail.com | Phone: +44 7474417471 | Location: London, UK</p>
+
+            <!-- Summary or Objective Statement -->
+            <div class="section">
+                <h2>Summary</h2>
+                <p>Motivated and results-driven professional with expertise in data analytics, data engineering, and web development. Skilled in building dynamic websites and applications, as well as developing efficient data pipelines and analytical solutions. Strong expertise in both front-end and back-end development, with a passion for creating user-friendly, responsive designs and insightful data-driven systems.</p>
+            </div>
+
+            <!-- Education -->
+            <div class="section">
+                <h2>Education</h2>
+                <ul>
+                    <li>
+                        <strong>Bachelor of Science in Biochemical Engineering</strong>
+                        <span class="date">Graduated: June 2021</span><br>
+                        University College London (UCL), London, UK - 2.1
+                    </li>
+                    <li>
+                        <strong>Undergraduate Preparatory Certificate (Science and Engineering)</strong>
+                        <span class="date">Graduated: June 2018</span><br>
+                        University College London (UCL), London, UK - A overall
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Skills -->
+            <div class="section">
+                <h2>Skills</h2>
+                <ul>
+                    <li>HTML5, CSS3, JavaScript, React</li>
+                    <li>Python, SQL, PostgreSQL</li>
+                    <li>GCP, AWS</li>
+                    <li>Git & Version Control</li>
+                    <li>RESTful APIs</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Work Experience -->
+            <div class="section">
+                <h2>Work Experience</h2>
+                <ul>
+                    <li>
+                        <strong>Junior Data Engineer</strong> <span class="date">May 2024 - Present</span><br>
+                        Simple Pharma, London, UK
+                        <ul>
+                            <li>Developed a data synchronization solution to ensure consistent data between TerminusDB and PostgreSQL using Python, SQL, and Azure Functions.</li>
+                            <li>Designed and implemented data models to effectively organize and structure company data for optimized use.</li>
+                            <li>Conducted ad-hoc data analysis, including the development of key performance indicators (KPIs) using Pandas to provide insights for business decision-making.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Analytics Engineer</strong> <span class="date">April 2023 - January 2024</span><br>
+                        Mashroom, London, UK
+                        <ul>
+                            <li>Developed SQL-based data models and tests in dbt to streamline data transformations and ensure data reliability.</li>
+                            <li>Developed and managed dashboards in Looker used for analytics and reporting.</li>
+                            <li>Designed and implemented a scalable BigQuery-based data warehouse on GCP, and collaborated cross-functionally to align database design with business goals.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Data Science Trainee</strong> <span class="date">March 2022 - December 2022</span><br>
+                        <ul>
+                            <li>Led a deep learning project to diagnose pneumonia using CNN and transfer learning, achieving 98% accuracy.</li>
+                            <li>Utilized medical imaging datasets and applied transfer learning techniques to improve model performance.</li>
+                            <li>GitHub repository for project: <a href="https://github.com/Anya9889/pneumonia_diagnosis" target="_blank">Pneumonia Diagnosis Project</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Data Analyst</strong> <span class="date">October 2022 - September 2022</span><br>
+                        JK Barnes, London, UK
+                        <ul>
+                            <li>Orchestrated the collection, cleaning, and integration of data from diverse sources,
+                                including job platforms and social media, to construct a comprehensive dataset of
+                                tech specialists to be used by a recruitment team.</li>
+                            <li>Conducted interviews with candidates to collect relevant quantitative and
+                                qualitative datа.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Research Intern</strong> <span class="date">June 2021 - October 2022</span><br>
+                        Inoviv, London, UK
+                        <ul>
+                            <li>Conducted data preprocessing on raw proteomics data and engaged in feature
+                                engineering, which helped to develop a machine learning model with a 90%
+                                accuracy.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Certifications -->
+            <div class="section">
+                <h2>Certifications</h2>
+                <ul>
+                    <li>Data Science Certification, Le Wagon <span class="date">2023</span></li>
+                    <li>dbt fundamentals, dbt Labs <span class="date">2024</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
-
-
-
-<!-- TODO 2: Add Your previous projects' HTML into the public folder -->
-
-<!-- TODO 3: Take screenshots of your project previews and add the images to the images folder -->
-
-<!-- TODO 4: Add titles/subtitles etc. -->
-
 <!-- TODO 5: Add a link to the project pages -->
 
 <!-- TODO 6: Add images to show the project previews
